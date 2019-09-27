@@ -1,0 +1,21 @@
+program fourth
+implicit none
+real x,e,n,y
+real::w=15
+
+x=277009.+w**2
+y=6.
+e=0.0000001
+n=0.
+do
+  y=y*((8./7.)-((y**7.)/(7.*x)))
+  n=n+1
+  if ((abs((y**7.)-x)).LE.e) exit
+  Write(*,*) y
+  if (n==10) exit
+  enddo
+  
+write(*,*) y
+write(*,*) 'Vpervie vipolnitsya pri n=', n
+    
+end program fourth
