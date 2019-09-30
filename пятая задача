@@ -10,7 +10,6 @@ imax=(xk-x0)/dx+0.5+1
 
 do j=1,jmax
     y=yk-(j-1)*dy
-    y2=y*y
     do i=1,imax
         x=x0+(i-1)*dx
         if ( (((x**2)/(a**2)+(y**2)/(b**2)).LE.1) .and. (y-x.GT.0) .and. (x+y.GT.0)) then
