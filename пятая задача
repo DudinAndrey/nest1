@@ -13,7 +13,7 @@ do j=1,jmax
     y2=y*y
     do i=1,imax
         x=x0+(i-1)*dx
-        if ( (((x**2)/(a**2)+(y**2)/(b**2)).LE.1) .and. (y-x.GT.0) .and. (y.GT.0)) then
+        if ( (((x**2)/(a**2)+(y**2)/(b**2)).LE.1) .and. (y-x.GT.0) .and. (x+y.GT.0)) then
         write(*,"(A2,$)")' *'
         else 
         write (*,"(A2,$)")' .'
