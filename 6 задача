@@ -1,0 +1,30 @@
+program six
+implicit none 
+real x0,xk,h,E,x,p0,d,pn,qn,an,S 
+integer imax,i,n 
+
+read(*,*) x0,xk,h,E 
+
+imax=int((xk-x0)/h+0.5)+1 
+
+do i=1,imax
+    pn=0 
+    n=1 
+    S=0 
+    p0=(x-1)/(x+1)
+    x=x0+(i-1)*h 
+        do while ((abs(pn).GE.(E*abs(S))))
+        
+        an=1+(n-1)*2 
+        qn=p0*((x-1)**(2))/((x+1)**2)
+        pn=qn/an 
+        
+        p0=qn 
+        n=n+1 
+        
+        S=S+pn 
+        d=abs(2*S-log(x))
+        enddo 
+    write(*,*) i,x,n,2*S,d 
+enddo
+end program six
