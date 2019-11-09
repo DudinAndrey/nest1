@@ -1,0 +1,19 @@
+program seven
+implicit NONE
+real t,m,s,r,i,j 
+integer,parameter::n=5
+
+do i=-n,n,0.1 
+    do j=-n,n,0.1 
+        t=(i**3)-(3*(i**2))+2 
+        
+        if ((j-t.LT.1) .and. (j-t.GE.0)) then 
+            write(*,'(a,$)') '*'
+            else 
+            write(*,'(a,$)') '/'
+        ENDIF
+    ENDDO
+write(*,*)
+enddo 
+
+end program seven
