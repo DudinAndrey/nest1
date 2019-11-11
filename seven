@@ -4,7 +4,7 @@ real t,w,s,r,i,j
 integer m,u,p,h
 integer,parameter::n=3
 
-w=n 
+w=-n 
 s=n 
 p=0 
  
@@ -31,7 +31,7 @@ enddo
 write(*,'(a,$)') '   '
 do h=-n,n,1 
     write(*,'(f4.0,$)') w 
-    w=w-1
+    w=w+1
     write(*,'(a,$)') '                '
 enddo
 end program
