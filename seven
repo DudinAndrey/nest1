@@ -23,7 +23,7 @@ do j=n,-n,-0.1
         if ((j-t.LT.1) .and. (j-t.GE.0)) then 
             write(*,'(a,$)') ' *'
             else 
-            write(*,'(a,$)') ' -'
+            write(*,'(a,$)') ' /'
         ENDIF
     ENDDO
 write(*,*)
